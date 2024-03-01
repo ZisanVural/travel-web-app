@@ -1,0 +1,505 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-TravelApplication-b8a0ff00-dca7-45ea-9bb4-d8450cf997c1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\bootstrap-datetimepicker.min.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\flexslider.css" />
+    <Content Remove="wwwroot\css\font-awesome.min.css" />
+    <Content Remove="wwwroot\css\fonts\flexslider-icon.eot" />
+    <Content Remove="wwwroot\css\fonts\flexslider-icon.svg" />
+    <Content Remove="wwwroot\css\fonts\flexslider-icon.ttf" />
+    <Content Remove="wwwroot\css\fonts\flexslider-icon.woff" />
+    <Content Remove="wwwroot\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Remove="wwwroot\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Remove="wwwroot\css\images\ui-icons_222222_256x240.png" />
+    <Content Remove="wwwroot\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Remove="wwwroot\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Remove="wwwroot\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Remove="wwwroot\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Remove="wwwroot\css\templatemo-style.css" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.eot" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.svg" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="wwwroot\fonts\FontAwesome.otf" />
+    <Content Remove="wwwroot\fonts\glyphicons-halflings-regular.eot" />
+    <Content Remove="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <Content Remove="wwwroot\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Remove="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <Content Remove="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Remove="wwwroot\img\about-1.jpg" />
+    <Content Remove="wwwroot\img\about-2.jpg" />
+    <Content Remove="wwwroot\img\about-3.jpg" />
+    <Content Remove="wwwroot\img\about-4.jpg" />
+    <Content Remove="wwwroot\img\about-5.jpg" />
+    <Content Remove="wwwroot\img\about-6.jpg" />
+    <Content Remove="wwwroot\img\about-7.jpg" />
+    <Content Remove="wwwroot\img\banner-1.jpg" />
+    <Content Remove="wwwroot\img\banner-2.jpg" />
+    <Content Remove="wwwroot\img\banner-3.jpg" />
+    <Content Remove="wwwroot\img\index-01.jpg" />
+    <Content Remove="wwwroot\img\index-02.jpg" />
+    <Content Remove="wwwroot\img\index-03.jpg" />
+    <Content Remove="wwwroot\img\index-04.jpg" />
+    <Content Remove="wwwroot\img\index-05.jpg" />
+    <Content Remove="wwwroot\img\index-06.jpg" />
+    <Content Remove="wwwroot\img\index-07.jpg" />
+    <Content Remove="wwwroot\img\index-08.jpg" />
+    <Content Remove="wwwroot\img\index-09.jpg" />
+    <Content Remove="wwwroot\img\index-10.jpg" />
+    <Content Remove="wwwroot\img\rating.png" />
+    <Content Remove="wwwroot\img\Thumbs.db" />
+    <Content Remove="wwwroot\img\tours-01.jpg" />
+    <Content Remove="wwwroot\img\tours-02.jpg" />
+    <Content Remove="wwwroot\img\tours-03.jpg" />
+    <Content Remove="wwwroot\img\tours-04.jpg" />
+    <Content Remove="wwwroot\img\tours-05.jpg" />
+    <Content Remove="wwwroot\img\tours-06.jpg" />
+    <Content Remove="wwwroot\img\tours-07.jpg" />
+    <Content Remove="wwwroot\img\tours-08.jpg" />
+    <Content Remove="wwwroot\img\tours-09.jpg" />
+    <Content Remove="wwwroot\img\tours-10.jpg" />
+    <Content Remove="wwwroot\img\world-map.png" />
+    <Content Remove="wwwroot\js\bootstrap-datetimepicker.min.js" />
+    <Content Remove="wwwroot\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\js\jquery-1.11.2.min.js" />
+    <Content Remove="wwwroot\js\jquery.flexslider-min.js" />
+    <Content Remove="wwwroot\js\moment.js" />
+    <Content Remove="wwwroot\js\templatemo-script.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.24" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.26" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.26" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.26" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.26" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.26">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\About\Create.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\About\Delete.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\About\Details.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\About\Edit.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\About\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Home\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Home\Privacy.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Home\Tours.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\js\site.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\LICENSE.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\About.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Home\About.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Home\Contact.cshtml" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap-datetimepicker.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\flexslider.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\font-awesome.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\fonts\flexslider-icon.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\fonts\flexslider-icon.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\fonts\flexslider-icon.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\fonts\flexslider-icon.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-icons_222222_256x240.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-icons_228ef1_256x240.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-icons_ef8c08_256x240.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-icons_ffd27a_256x240.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\images\ui-icons_ffffff_256x240.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap-datetimepicker.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\flexslider.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\fonts\flexslider-icon.eot" />
+    <None Include="wwwroot\css\fonts\flexslider-icon.svg" />
+    <None Include="wwwroot\css\fonts\flexslider-icon.ttf" />
+    <None Include="wwwroot\css\fonts\flexslider-icon.woff" />
+    <None Include="wwwroot\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <None Include="wwwroot\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <None Include="wwwroot\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <None Include="wwwroot\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <None Include="wwwroot\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <None Include="wwwroot\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <None Include="wwwroot\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <None Include="wwwroot\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <None Include="wwwroot\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <None Include="wwwroot\css\images\ui-icons_222222_256x240.png" />
+    <None Include="wwwroot\css\images\ui-icons_228ef1_256x240.png" />
+    <None Include="wwwroot\css\images\ui-icons_ef8c08_256x240.png" />
+    <None Include="wwwroot\css\images\ui-icons_ffd27a_256x240.png" />
+    <None Include="wwwroot\css\images\ui-icons_ffffff_256x240.png" />
+    <None Include="wwwroot\css\templatemo-style.css" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\img\about-1.jpg" />
+    <None Include="wwwroot\img\about-2.jpg" />
+    <None Include="wwwroot\img\about-3.jpg" />
+    <None Include="wwwroot\img\about-4.jpg" />
+    <None Include="wwwroot\img\about-5.jpg" />
+    <None Include="wwwroot\img\about-6.jpg" />
+    <None Include="wwwroot\img\about-7.jpg" />
+    <None Include="wwwroot\img\banner-1.jpg" />
+    <None Include="wwwroot\img\banner-2.jpg" />
+    <None Include="wwwroot\img\banner-3.jpg" />
+    <None Include="wwwroot\img\index-01.jpg" />
+    <None Include="wwwroot\img\index-02.jpg" />
+    <None Include="wwwroot\img\index-03.jpg" />
+    <None Include="wwwroot\img\index-04.jpg" />
+    <None Include="wwwroot\img\index-05.jpg" />
+    <None Include="wwwroot\img\index-06.jpg" />
+    <None Include="wwwroot\img\index-07.jpg" />
+    <None Include="wwwroot\img\index-08.jpg" />
+    <None Include="wwwroot\img\index-09.jpg" />
+    <None Include="wwwroot\img\index-10.jpg" />
+    <None Include="wwwroot\img\rating.png" />
+    <None Include="wwwroot\img\Thumbs.db" />
+    <None Include="wwwroot\img\tours-01.jpg" />
+    <None Include="wwwroot\img\tours-02.jpg" />
+    <None Include="wwwroot\img\tours-03.jpg" />
+    <None Include="wwwroot\img\tours-04.jpg" />
+    <None Include="wwwroot\img\tours-05.jpg" />
+    <None Include="wwwroot\img\tours-06.jpg" />
+    <None Include="wwwroot\img\tours-07.jpg" />
+    <None Include="wwwroot\img\tours-08.jpg" />
+    <None Include="wwwroot\img\tours-09.jpg" />
+    <None Include="wwwroot\img\tours-10.jpg" />
+    <None Include="wwwroot\img\world-map.png" />
+    <None Include="wwwroot\js\bootstrap-datetimepicker.min.js" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\jquery-1.11.2.min.js" />
+    <None Include="wwwroot\js\jquery.flexslider-min.js" />
+    <None Include="wwwroot\js\moment.js" />
+    <None Include="wwwroot\js\templatemo-script.js" />
+  </ItemGroup>
+
+</Project>

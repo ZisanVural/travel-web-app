@@ -1,0 +1,190 @@
+﻿@model IEnumerable<WebApplication3.Models.About>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hakkımızda</title>
+	<!--
+	Holiday Template
+	http://www.templatemo.com/tm-475-holiday
+	-->
+	
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+  <body class="tm-gray-bg">
+   	<!-- Header
+  	<div class="tm-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+  					<a href="#" class="tm-site-name">Trusty Travel</a>	
+  				</div>
+	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  				<div class="mobile-menu-icon">
+		              <i class="fa fa-bars"></i>
+		            </div>
+	  				<nav class="tm-nav">
+						<ul>
+						
+							<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Hakkımızda</a>
+                        </li><li><a href="about.html">Anasayfa</a></li>
+							<li><a href="tours.html">Turlar</a></li>
+							<li><a href="contact.html">İletişim</a></li>
+						</ul>
+					</nav>		
+	  			</div>				
+  			</div>
+  		</div>	  	
+  	</div>  -->
+	
+	<!-- Banner -->
+	<section class="tm-banner">
+		<!-- Flexslider -->
+		<div class="flexslider flexslider-banner">
+		  <ul class="slides">
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title"><span class="tm-yellow-text">Tur</span> Paketleri</h1>
+					<p class="tm-banner-subtitle">En Uygun Turlar</p>
+					<a href="#more" class="tm-banner-link">Daha Fazla Bilgi</a>	
+				</div>
+		      <img src="~/img/banner-3.jpg" />
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Hawaii <span class="tm-yellow-text">Gezi</span> Seçenekleri</h1>
+					<p class="tm-banner-subtitle">Harika Yerleri Keşfedin</p>
+					<a href="#more" class="tm-banner-link">Daha Fazla Bilgi</a>	
+				</div>
+		      <img src="~/img/banner-2.jpg" />
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Büyük <span class="tm-yellow-text">Oteller</span> Burada</h1>
+					<p class="tm-banner-subtitle">Konforu Hissedin</p>
+					<a href="#more" class="tm-banner-link">Daha Fazla Bilgi</a>	
+				</div>
+		      <img src="~/img/banner-1.jpg" />
+		    </li>
+		  </ul>
+		</div>		
+	</section>
+
+	<!-- gray bg -->	
+	<section class="container tm-home-section-1" id="more">
+		<div class="row">
+			<!-- slider -->
+			<div class="flexslider flexslider-about effect2">
+			  <ul class="slides">
+				  @foreach(var item in Model){
+			    <li>
+							<img src="@Url.Content("../"+item.ImagePath)" alt="image" />
+			      <div class="flex-caption">
+			      	<h2 class="slider-title">@item.Title</h2>
+			      	<h3 class="slider-subtitle">@item.Description</h3>
+			      	
+			      	<div class="slider-social">
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-google-plus"></i></a>
+			      	</div>
+			      </div>			      
+			    </li>}
+			    @* <li>
+			      <img src="~/img/about-1.jpg" alt="image" />
+			      <div class="flex-caption">
+			      	<h2 class="slider-title">Bizi seçtiğiniz için teşekkür ederiz!</h2>
+			      	<h3 class="slider-subtitle">Trusty Travel memnuniyetinizi sağlamaya yönelik tatil planları sunmaktadır.</h3>
+			      	<p class="slider-description">Bize güvendiğiniz ve memnuniyet kazandığınız için çok mutluyuz! İyi tatiller.</p>
+			      	<div class="slider-social">
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-google-plus"></i></a>
+			      	</div>
+			      </div>			      
+			    </li>
+			    <li>
+			      <img src="~/img/about-1.jpg" alt="image" />
+			      <div class="flex-caption">
+			      	<h2 class="slider-title">Gidilecek Yeni Turlar</h2>
+			      	<h3 class="slider-subtitle">Dünyada keşfedilmemiş yerlere yönelik.</h3>
+			      	<p class="slider-description">2025 yılında yaz turları planlamalar başlayacaktır.</p>
+			      	<div class="slider-social">
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-google-plus"></i></a>
+			      	</div>
+			      </div>			      
+			    </li>
+			    <li>
+			      <img src="~/img/about-1.jpg" alt="image" />
+			      <div class="flex-caption">
+			      	<h2 class="slider-title">Tur ve Seyahat</h2>
+			      	<h3 class="slider-subtitle">Çok yönlü tatil planları.</h3>
+			      	<p class="slider-description"> Turlar sayesinde çok daha kısa sürede daha fazla seyahat edebilirsiniz.</p>
+			      	<div class="slider-social">
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a href="#" class="tm-social-icon"><i class="fa fa-google-plus"></i></a>
+			      	</div>
+			      </div>			      
+			    </li> *@
+			  </ul>
+			</div>
+		</div>
+<section class="tm-white-bg section-padding-bottom">
+	</section>
+	<footer class="tm-black-bg">
+		<div class="container">
+			<div class="row">
+				<p class="tm-copyright-text">Copyright &copy; 2024-TrustyTravel</p>
+			</div>
+		</div>	
+		
+	</footer>
+    		<!-- Templatemo Script -->
+	<script>
+		$(function() {
+
+			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+		  	$('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+		  	});		  	
+		});
+		$(window).load(function(){
+			// Flexsliders
+		  	$('.flexslider.flexslider-banner').flexslider({
+			    controlNav: false
+		    });
+		  	$('.flexslider').flexslider({
+		    	animation: "slide",
+		    	directionNav: false,
+		    	slideshow: false
+		  	});
+		});
+	</script>
+ </body>
+ </html>
